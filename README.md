@@ -1,6 +1,6 @@
 ### Big Result Set Iterator
 
-`iter_big_result(query, chunk_size: int)`
+`iter_big_result(query, chunk_size)`
 Takes sqlalchemy.orm.Query object and chunk size.
 Returns query result iterator, asking no more than chunk_size lines as necessary.
 
