@@ -19,9 +19,11 @@ def iter_big_result(
             type(query)
         ))
     offset = 0
+    if query._offset:
+        offset = query._offset
     total = float('inf')
     if query._limit:
-        total = query._limit
+        total = query._limit + offset
     while total > offset:
         chunk = (
             query
